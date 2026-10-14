@@ -404,6 +404,36 @@ def build_404():
     body='''<main id="main"><section class="section"><div class="wrap" style="text-align:center;max-width:640px"><span class="eyebrow">404</span><h1 class="title-lg" style="margin:8px 0 14px">페이지를 찾을 수 없습니다</h1><p class="muted">주소가 바뀌었거나 삭제된 페이지입니다. 아래 버튼으로 이동해 주세요.</p><div class="inline-actions" style="justify-content:center;margin-top:22px"><a class="btn primary" href="/index.html">홈으로</a><a class="btn secondary" href="/portfolio.html">시공 사례 보기</a><a class="btn secondary" href="/contact.html#quoteForm">견적 문의</a></div></div></section></main>'''
     return head('페이지를 찾을 수 없습니다 | '+S['brand'],'요청하신 페이지를 찾을 수 없습니다.',path="404.html")+topbar(0,'404')+body+footer(0)
 
+def build_ad():
+    D=load('ad.json'); by={r.get('slug'):r for r in CASES}
+    stats=''.join(f'<div class="ad-stat"><div class="ad-num"><span data-count="{x["to"]}">{x["to"]}</span>{e(x["suffix"])}</div><div class="ad-lab">{e(x["label"])}</div><p>{e(x["note"])}</p></div>' for x in D['stats'])
+    prom=''.join(f'<div class="ad-prom"><b>0{i+1}</b><h3>{e(x["t"])}</h3><p>{e(x["d"])}</p></div>' for i,x in enumerate(D['promise']))
+    cs=''
+    for sl in D['cases']:
+        r=by.get(sl)
+        if not r: continue
+        cs+=f'<a class="ad-case" href="cases/{e(sl)}.html"><img src="{e(r["img"])}" alt="{e(r["title"])} 시공 사진"><span>{e(r["title"])}</span></a>'
+    tel_link=f'tel:{TELH}'; sms=f'sms:{TELDH}' if TELDH else ''
+    sms_btn=f'<a class="ad-btn ghost" href="{sms}">문자 상담</a>' if sms else ''
+    body=f'''<main id="main" class="ad">
+<header class="ad-top"><a class="ad-brand" href="index.html" aria-label="{e(S['brand'])} 홈페이지"><img src="assets/images/logo-mark-white.png" alt="" width="44" height="42"><strong>{e(S['brand'])}</strong></a><a class="ad-btn small" href="{tel_link}">전화 상담</a></header>
+<section class="ad-hero"><img class="hero" src="{e(D['hero_img'])}" alt="" fetchpriority="high"><div class="ad-hero-in"><span class="ad-eyebrow">{e(D['eyebrow'])}</span><h1>{D['title_html']}</h1><p>{e(D['sub'])}</p><div class="ad-actions"><a class="ad-btn" href="{tel_link}">무료 전화 상담</a>{sms_btn}</div></div></section>
+<section class="ad-sec"><div class="ad-wrap"><div class="ad-stats">{stats}</div></div></section>
+<section class="ad-sec alt"><div class="ad-wrap"><h2 class="ad-h2">{e(D['promise_title'])}</h2><div class="ad-proms">{prom}</div></div></section>
+<section class="ad-sec"><div class="ad-wrap"><h2 class="ad-h2">{e(D['cases_title'])}</h2><div class="ad-cases">{cs}</div><p class="ad-more"><a href="portfolio.html">시공 사례 전체 보기 →</a></p></div></section>
+<section class="ad-sec cta"><div class="ad-wrap"><h2 class="ad-h2">{e(D['cta_title'])}</h2><p class="ad-sub">{e(D['cta_sub'])}</p><div class="ad-actions center"><a class="ad-btn" href="{tel_link}">전화 상담 {e(TEL)}</a>{sms_btn}<a class="ad-btn ghost" href="contact.html#quoteForm">견적 문의 남기기</a></div></div></section>
+<footer class="ad-foot"><p><strong>{e(S['brand'])}</strong> · {e(ADDR)}</p>{biz_line()}<p><a href="privacy.html">개인정보처리방침</a> · <a href="index.html">홈페이지</a></p></footer>
+</main>
+<div class="ad-bar"><a href="{tel_link}">전화 상담</a>{('<a class="alt" href="'+sms+'">문자 상담</a>') if sms else ''}</div>
+<link rel="stylesheet" href="assets/ad.css">
+<script>window.DAND_TEL="{TELH}";window.DAND_SMS="{TELDH}";</script>
+<script>(function(){{var els=document.querySelectorAll('[data-count]');function run(el){{var to=+el.dataset.count,d=1400,t0=null;function f(t){{if(!t0)t0=t;var p=Math.min((t-t0)/d,1),v=1+(to-1)*(1-Math.pow(1-p,3));el.textContent=Math.round(v);if(p<1)requestAnimationFrame(f)}}requestAnimationFrame(f)}}
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var io=new IntersectionObserver(function(en){{en.forEach(function(x){{if(x.isIntersecting){{run(x.target);io.unobserve(x.target)}}}})}},{{threshold:.6}});els.forEach(function(el){{el.textContent='1';io.observe(el)}});}})();
+document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="sms:"]');if(a){{try{{if(window.fbq)fbq('track','Contact')}}catch(_){{}}}}}});</script>
+</body></html>'''
+    h=head(D['title'],D['desc'],path='ad.html').replace('<meta name="theme-color"','<meta name="robots" content="noindex,follow">\n  <meta name="theme-color"')
+    return h+body
+
 import re as _re
 try:
     from PIL import Image as _Im
@@ -439,7 +469,7 @@ if __name__=='__main__':
     if os.path.isdir(pd):
         for f in os.listdir(pd):
             if f.endswith('.html') and f not in keep: os.remove(os.path.join(pd,f))
-    write('index.html',build_index()); write('about.html',build_about()); write('portfolio.html',build_portfolio()); write('contact.html',build_contact()); write('privacy.html',build_privacy()); write('404.html',build_404())
+    write('index.html',build_index()); write('about.html',build_about()); write('portfolio.html',build_portfolio()); write('contact.html',build_contact()); write('privacy.html',build_privacy()); write('404.html',build_404()); write('ad.html',build_ad())
     for p in PROJECTS: write(f'projects/{p["slug"]}.html',build_project(p))
     cd=os.path.join(ROOT,'cases'); ck={r['slug']+'.html' for r in CASES if r.get('slug') and r.get('gallery')}
     os.makedirs(cd,exist_ok=True)
