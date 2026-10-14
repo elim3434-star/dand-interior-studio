@@ -509,3 +509,28 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .cat-head{display:flex;align-items:baseline;gap:14px;margin:0 0 22px;padding-bottom:14px;border-bottom:1px solid var(--line-strong)}
 .cat-head h3{margin:0;font-size:clamp(24px,3vw,32px);letter-spacing:-.02em}
 .cat-head span{color:var(--muted);font-size:14px}
+
+/* ===== 모바일 간소화 (700px 이하) ===== */
+@media(max-width:700px){
+  .hero-note{display:none}
+  .flow{display:none}
+  .services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .service-card.svc{border-radius:18px}
+  .svc-body{padding:12px 14px 16px}
+  .service-card.svc strong{font-size:16px;margin-bottom:4px}
+  .service-card.svc p{font-size:12.5px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .slider .sl-btn{display:none}
+  .real-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .real-card{position:relative;border-radius:18px}
+  .real-ph{aspect-ratio:1/1}
+  .real-body{padding:12px 14px 16px;gap:4px}
+  .real-body .badge-solid{display:none}
+  .real-body h3{font-size:15px;line-height:1.35;margin:0}
+  .real-body p{font-size:12.5px;line-height:1.45;margin:0;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .real-body .btn{position:absolute;inset:0;padding:0;border:0;background:transparent;font-size:0;border-radius:18px;min-height:0}
+  .cat-head{flex-direction:column;gap:4px}
+  .cat-block+.cat-block{margin-top:40px}
+  .section,.section-sm{padding-top:48px;padding-bottom:48px}
+  .floating-cta{padding:8px 12px calc(8px + env(safe-area-inset-bottom))}
+  .floating-cta a{padding:11px 8px;font-size:14px}
+}
