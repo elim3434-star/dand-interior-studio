@@ -67,8 +67,8 @@ window.enhanceSelect=function(sel){
         '현장 위치: '+g('location'),'예산: '+g('budget'),'유입 경로: '+g('source')+(g('referrer')?' / 소개: '+g('referrer'):''),'요청: '+g('memo')].join('\n');
       document.getElementById('outputText').textContent=t;
       document.getElementById('outputBox').classList.add('on');
-      var tel=(window.DAND_TEL||'01029940606');
-      document.getElementById('smsLink').href='sms:'+tel+'?body='+encodeURIComponent(t);
+      var tel=(window.DAND_TEL||'07077771114');
+      var sm=document.getElementById('smsLink'); sm.href='sms:'+tel+'?body='+encodeURIComponent(t); if(/^070/.test(tel)) sm.style.display='none';
       document.getElementById('mailLink').href='mailto:'+(window.DAND_MAIL||'theproper@naver.com')+'?subject='+encodeURIComponent('[견적문의] '+g('siteName'))+'&body='+encodeURIComponent(t);
       document.getElementById('outputBox').scrollIntoView({behavior:'smooth',block:'nearest'});
     });
