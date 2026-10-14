@@ -410,7 +410,8 @@ def _fix_imgs(content,path):
                 try:
                     w,h=_Im.open(fp).size; tag=tag[:-1].rstrip('/')+f' width="{w}" height="{h}">'
                 except Exception: pass
-        if 'loading=' not in tag and 'hero' not in tag: tag=tag[:-1]+' loading="lazy">'
+        ctx=content[max(0,m.start()-60):m.start()]
+        if 'loading=' not in tag and 'hero' not in tag and 'hero-media' not in ctx and 'brand-mark' not in ctx: tag=tag[:-1]+' loading="lazy">'
         if 'decoding=' not in tag: tag=tag[:-1]+' decoding="async">'
         return tag
     return _re.sub(r'<img\b[^>]*>',rep,content)
