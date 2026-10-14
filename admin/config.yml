@@ -209,6 +209,18 @@ collections:
                 fields:
                   - { label: "단계 이름", name: t, widget: string }
                   - { label: "설명", name: d, widget: string }
+              - label: "공사 과정 4단계 (이게 있으면 위 흐름·단계 대신 이것이 나옵니다)"
+                name: phases
+                widget: list
+                required: false
+                fields:
+                  - { label: "번호 (예: 01)", name: no, widget: string }
+                  - { label: "영문 이름", name: en, widget: string }
+                  - { label: "단계 이름", name: t, widget: string }
+                  - label: "세부 항목"
+                    name: items
+                    widget: list
+                    field: { label: "항목", name: o, widget: string }
           - label: "디자인 컨셉 소개 구역"
             name: concept
             widget: object
@@ -275,6 +287,20 @@ collections:
                 fields:
                   - { label: "제목", name: t, widget: string }
                   - { label: "설명", name: d, widget: text }
+          - label: "약속 구역 (소개 페이지 가운데 검은 박스)"
+            name: promise
+            widget: object
+            required: false
+            fields:
+              - { label: "작은 윗글씨", name: eyebrow, widget: string }
+              - { label: "제목", name: title, widget: string }
+              - { label: "소개 문구", name: text, widget: text }
+              - label: "약속 항목"
+                name: items
+                widget: list
+                fields:
+                  - { label: "제목", name: t, widget: string }
+                  - { label: "설명", name: d, widget: string }
           - label: "연혁"
             name: history
             widget: object

@@ -274,12 +274,15 @@ def build_about():
         tgt=' target="_blank" rel="noopener"' if ext else ''
         return f'<a class="kv-box kv-link" href="{e(href)}"{tgt}><dl><dt>{e(x["k"])}</dt><dd>{t(x["v"])} <span class="kv-go" aria-hidden="true">↗</span></dd></dl></a>'
     kv=''.join(kvbox(x) for x in b['items'])
+    PR=A.get('promise') or {}
+    promise_html=(f'<section class="section-sm" style="padding-top:0"><div class="wrap"><div class="promise"><span class="eyebrow">{e(PR["eyebrow"])}</span><h2 class="title-lg">{t(PR["title"])}</h2><p class="promise-lead">{t(PR["text"])}</p><div class="promise-grid">'+''.join(f'<article><strong>{e(x["t"])}</strong><p>{t(x["d"])}</p></article>' for x in PR['items'])+'</div></div></div></section>') if PR else ''
     HI=A.get('history') or {}
     hist=''.join(f'<li><span class="tl-date serif">{e(x["date"])}</span><div><strong>{e(x["title"])}</strong>{("<p>"+t(x["desc"])+"</p>") if x.get("desc") else ""}</div></li>' for x in HI.get('items',[]))
     hist_html=f'<section class="section-sm" style="padding-top:0"><div class="wrap">{sec_head(HI)}<ol class="timeline">{hist}</ol></div></section>' if hist else ''
     return head(A['seo_title'],A['seo_desc'],path="about.html",keywords=A.get('seo_keywords',''))+topbar(0,'about')+f'''<main id="main">
 {page_hero(A['hero'],'소개')}
 <section class="section"><div class="wrap story-grid"><div class="story-image" id="storyImgs">{simgs}</div><div class="card-panel story-card"><span class="eyebrow">{e(st['eyebrow'])}</span><h2 class="title-lg">{t(st['title'])}</h2><p class="muted">{t(st['text'])}</p><div class="story-points" id="storyPts">{pts}</div></div></div></section>
+{promise_html}
 <section class="section-sm" style="padding-top:0"><div class="wrap">{sec_head(b)}<div class="kv-grid">{kv}</div></div></section>
 {hist_html}
 </main>
