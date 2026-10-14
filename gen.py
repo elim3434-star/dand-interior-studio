@@ -421,13 +421,22 @@ def build_ad():
     lines=''.join(f'<p class="rv">{e(l)}</p>' for l in W['lines'])
     body=f'''<main id="main" class="ad">
 <header class="ad-top"><a class="ad-brand" href="index.html" aria-label="{e(S['brand'])} 홈페이지"><img src="assets/images/logo-mark-white.png" alt="" width="44" height="42"><strong>{e(S['brand'])}</strong></a><a class="ad-btn small" href="{tel_link}">전화 상담</a></header>
-<section class="ad-hero"><img class="hero" src="{e(D['hero_img'])}" alt="" fetchpriority="high"><div class="ad-hero-in"><span class="ad-eyebrow">{e(D['eyebrow'])}</span><h1>{D['title_html']}</h1><p>{e(D['sub'])}</p><div class="ad-actions"><a class="ad-btn" href="{tel_link}">무료 전화 상담</a>{sms_btn}</div></div><div class="ad-scroll">SCROLL</div></section>
+<section class="ad-hero"><img class="hero" src="{e(D['hero_img'])}" alt="" fetchpriority="high"><div class="ad-hero-in"><span class="ad-eyebrow">{e(D['eyebrow'])}</span><h1>{D['title_html']}</h1><p>{e(D['sub'])}</p><div class="ad-actions"><a class="ad-btn" href="#consult">{e(D["hero_btn"])}</a><a class="ad-btn ghost" href="{tel_link}">전화 상담</a></div></div><div class="ad-scroll">SCROLL</div></section>
 <section class="ad-sec"><div class="ad-wrap"><span class="ad-eb rv">{e(R['eyebrow'])}</span><h2 class="ad-h2 rv">{R['title_html']}</h2><p class="ad-sub rv">{e(R['sub'])}</p><div class="ad-stats">{stats}</div></div></section>
 <section class="ad-sec alt"><div class="ad-wrap"><span class="ad-eb rv">{e(D['cases_eyebrow'])}</span><h2 class="ad-h2 rv">{D['cases_title_html']}</h2></div><div class="ad-track" tabindex="0" aria-label="시공 사례 목록">{cs}</div><p class="ad-more"><a href="portfolio.html">시공 사례 전체 보기 →</a></p></section>
 <section class="ad-sec"><div class="ad-wrap"><span class="ad-eb rv">{e(W['eyebrow'])}</span><h2 class="ad-h2 rv">{W['title_html']}</h2><p class="ad-sub rv">{W['sub']}</p><div class="ad-lines">{lines}</div></div></section>
 <section class="ad-sec alt"><div class="ad-wrap"><span class="ad-eb rv">{e(D['promise_eyebrow'])}</span><h2 class="ad-h2 rv">{D['promise_title_html']}</h2><div class="ad-proms">{prom}</div></div></section>
 <section class="ad-sec"><div class="ad-wrap"><span class="ad-eb rv">{e(D['process_eyebrow'])}</span><h2 class="ad-h2 rv">{D['process_title_html']}</h2><p class="ad-sub rv">{e(D['process_sub'])}</p><div class="ad-steps">{ph}</div></div></section>
-<section class="ad-sec cta"><div class="ad-wrap"><span class="ad-eb rv">{e(D['cta_eyebrow'])}</span><h2 class="ad-h2 rv">{D['cta_title_html']}</h2><p class="ad-sub rv">{D['cta_sub']}</p><div class="ad-actions center"><a class="ad-btn big" href="{tel_link}">{e(D['cta_btn'])} · {e(TEL)}</a>{sms_btn}<a class="ad-btn ghost" href="contact.html#quoteForm">견적 문의 남기기</a></div></div></section>
+<section class="ad-sec cta" id="consult"><div class="ad-wrap"><span class="ad-eb rv">{e(D['cta_eyebrow'])}</span><h2 class="ad-h2 rv">{D['cta_title_html']}</h2><p class="ad-sub rv">{D['cta_sub']}</p>
+<form class="ad-form" id="adForm" novalidate><h3>{e(D['form']['title'])}</h3>
+<label>공사 종류<select id="adType">{''.join('<option>'+e(x)+'</option>' for x in D['form']['types'])}</select></label>
+<label>평수 (모르면 비워두세요)<input id="adArea" inputmode="numeric" placeholder="예: 32평"></label>
+<label>지역<input id="adLoc" placeholder="예: 안산시 상록구"></label>
+<label>연락처<input id="adPhone" type="tel" inputmode="tel" placeholder="010-0000-0000"></label>
+<p class="ad-err" id="adErr" role="alert"></p>
+<a class="ad-btn big" id="adSend" href="#consult">{e(D['form']['send'])}</a>
+<a class="ad-btn ghost" href="{tel_link}">전화로 바로 상담 {e(TEL)}</a>
+<p class="ad-note">{e(D['form']['note'])}</p></form></div></section>
 <footer class="ad-foot"><p><strong>{e(S['brand'])}</strong> · {e(ADDR)}</p>{biz_line()}<p><a href="privacy.html">개인정보처리방침</a> · <a href="index.html">홈페이지</a></p></footer>
 </main>
 <div class="ad-bar"><a href="{tel_link}">전화 상담</a>{('<a class="alt" href="'+sms+'">문자 상담</a>') if sms else ''}</div>
@@ -437,6 +446,11 @@ def build_ad():
 function run(el){{var to=+el.dataset.count,d=1400,t0=null;function f(t){{if(!t0)t0=t;var p=Math.min((t-t0)/d,1);el.textContent=Math.round(1+(to-1)*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}}requestAnimationFrame(f)}}
 var io=new IntersectionObserver(function(en){{en.forEach(function(x){{if(!x.isIntersecting)return;x.target.classList.add('in');var c=x.target.querySelector('[data-count]');if(c)run(c);io.unobserve(x.target)}})}},{{threshold:.35}});
 document.querySelectorAll('.rv').forEach(function(el){{io.observe(el);var c=el.querySelector('[data-count]');if(c)c.textContent='1'}});}})();
+(function(){{var s=document.getElementById('adSend');if(!s)return;var n=window.DAND_SMS||'';var v=function(i){{return document.getElementById(i).value.trim()}};
+s.addEventListener('click',function(ev){{if(!v('adPhone')){{ev.preventDefault();document.getElementById('adErr').textContent='연락처를 입력해 주세요.';return}}document.getElementById('adErr').textContent='';
+var t='[D& 인테리어 상담 문의]\\n공사: '+v('adType')+'\\n평수: '+(v('adArea')||'미정')+'\\n지역: '+(v('adLoc')||'미정')+'\\n연락처: '+v('adPhone');
+try{{if(window.fbq)fbq('track','Lead')}}catch(_){{}}
+if(!n){{ev.preventDefault();return}}s.href='sms:'+n+(/iPhone|iPad|Mac/.test(navigator.userAgent)?'&':'?')+'body='+encodeURIComponent(t);}});}})();
 document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="sms:"]');if(a){{try{{if(window.fbq)fbq('track','Contact')}}catch(_){{}}}}}});</script>
 </body></html>'''
     h=head(D['title'],D['desc'],path='ad.html').replace('<meta name="theme-color"','<meta name="robots" content="noindex,follow">\n  <meta name="theme-color"')
