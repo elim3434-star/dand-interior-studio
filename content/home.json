@@ -1,0 +1,282 @@
+{
+  "hero": {
+    "eyebrow": "Design studio D& · 수도권",
+    "title": "설계부터 시공까지,\n한 팀이 책임집니다.",
+    "text": "상가와 아파트를 수도권 전역에서 시공합니다. 사내 디자이너가 도면과 3D 렌더링으로 먼저 보여드리고, 철거부터 마감까지 현장을 직접 관리합니다.",
+    "btn1": "견적 문의하기",
+    "btn2": "시공 사례 보기",
+    "note_title": "3D Preview",
+    "note_text": "공사 전에 완성 모습을 렌더링으로 확인하고 결정하실 수 있습니다.",
+    "img": "assets/images/ansan-cafe/34.webp",
+    "img_alt": "D& 인테리어가 시공한 카페 내부",
+    "img_note": ""
+  },
+  "stats": [
+    {
+      "t": "설계",
+      "d": "현장 실측 후 도면 작성",
+      "img": "assets/images/ansan-cafe/07.webp",
+      "cap": "실제 평면도"
+    },
+    {
+      "t": "3D 렌더링",
+      "d": "공사 전에 완성 모습 확인",
+      "img": "assets/images/ansan-cafe/12.webp",
+      "cap": "3D 렌더링"
+    },
+    {
+      "t": "시공",
+      "d": "철거만 따로도 가능",
+      "img": "assets/images/ansan-cafe/22.webp",
+      "cap": "시공 현장"
+    },
+    {
+      "t": "아파트",
+      "d": "철거부터 마감까지",
+      "img": "assets/images/svc/res_h1.webp",
+      "cap": "시공 현장"
+    },
+    {
+      "t": "상가",
+      "d": "카페 · 식당 · 사무실",
+      "img": "assets/images/ansan-cafe/29.webp",
+      "cap": "완공 사진"
+    },
+    {
+      "t": "수도권",
+      "d": "서울·경기·인천 시공",
+      "img": "",
+      "cap": ""
+    }
+  ],
+  "services": {
+    "eyebrow": "Services",
+    "title": "시공 분야",
+    "desc": "상가와 아파트를 같은 팀이 시공합니다. 철거만 따로 맡기셔도 됩니다.",
+    "items": [
+      {
+        "t": "상업공간",
+        "d": "식당, 카페 등 점포 인테리어. 프랜차이즈 매장 시공 경험이 있습니다.",
+        "images": [
+          "assets/images/ansan-cafe/34.webp",
+          "assets/images/ansan-cafe/29.webp",
+          "assets/images/ansan-cafe/31.webp"
+        ],
+        "img_note": ""
+      },
+      {
+        "t": "주거공간",
+        "d": "아파트와 주택 리모델링. 거주 불편을 줄이는 공정으로 진행합니다.",
+        "images": [
+          "assets/images/svc/res_h2.webp",
+          "assets/images/svc/res_h1.webp",
+          "assets/images/svc/res_h3.webp"
+        ],
+        "img_note": ""
+      },
+      {
+        "t": "내부 철거",
+        "d": "철거 전문 인력이 직접 진행합니다. 철거만 별도로 의뢰할 수 있습니다.",
+        "images": [
+          "assets/images/ansan-cafe/15.webp",
+          "assets/images/ansan-cafe/19.webp",
+          "assets/images/ansan-cafe/01.webp"
+        ],
+        "img_note": ""
+      },
+      {
+        "t": "설계 · 3D 렌더링",
+        "d": "도면과 3D 렌더링으로 시공 전에 완성 모습을 확인합니다.",
+        "images": [
+          "assets/images/ansan-cafe/08.webp",
+          "assets/images/ansan-cafe/10.webp",
+          "assets/images/ansan-cafe/13.webp"
+        ],
+        "img_note": ""
+      }
+    ]
+  },
+  "cases": {
+    "eyebrow": "Selected Work",
+    "title": "시공 사례",
+    "desc": "실제로 시공한 현장입니다. 더 많은 사진은 블로그와 인스타그램에서 볼 수 있습니다."
+  },
+  "schedule": {
+    "eyebrow": "Schedule",
+    "title": "공사 기간, 최소 5일에서 최장 2주",
+    "desc": "공사 규모에 따라 최소 5일, 최장 2주가 걸리며 현장 상황에 맞게 조율할 수 있습니다. 공종별 투입 시기를 정해 일정이 겹치지 않게 진행합니다. 아래는 최장 2주 기준 예시이며 실제 일정은 상담 후 공정표로 드립니다.",
+    "aria": "최장 2주 공정 예시",
+    "weeks": [
+      "1주차",
+      "2주차"
+    ],
+    "rows": [
+      {
+        "label": "철거",
+        "bar": "철거",
+        "start": 0,
+        "width": 20,
+        "dark": false
+      },
+      {
+        "label": "목공·설비",
+        "bar": "목공 · 설비",
+        "start": 15,
+        "width": 45,
+        "dark": false
+      },
+      {
+        "label": "전기",
+        "bar": "배선 · 마감 전기",
+        "start": 45,
+        "width": 40,
+        "dark": false
+      },
+      {
+        "label": "타일·마감",
+        "bar": "타일 · 마감",
+        "start": 65,
+        "width": 35,
+        "dark": true
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "진행 절차",
+    "desc": "견적 문의부터 사후 관리까지 8단계로 진행합니다.",
+    "steps": [
+      {
+        "t": "견적 문의",
+        "d": "전화 또는 견적 양식으로 접수"
+      },
+      {
+        "t": "방문 상담",
+        "d": "현장을 보며 요구사항 확인"
+      },
+      {
+        "t": "현장 실측",
+        "d": "정확한 치수 측정"
+      },
+      {
+        "t": "디자인 미팅",
+        "d": "도면과 3D 렌더링 제안"
+      },
+      {
+        "t": "계약",
+        "d": "견적과 공정표 확정"
+      },
+      {
+        "t": "공사 진행",
+        "d": "철거부터 마감까지 시공"
+      },
+      {
+        "t": "공사 완료",
+        "d": "점검 후 인도"
+      },
+      {
+        "t": "사후 관리",
+        "d": "하자 접수와 보수"
+      }
+    ],
+    "flow": [
+      "상담",
+      "현장 실측",
+      "디자인 도면·3D 시안",
+      "견적 확정",
+      "시공",
+      "A/S 및 사후관리"
+    ]
+  },
+  "concept": {
+    "eyebrow": "Design Concept",
+    "title": "이런 분위기도 만들 수 있습니다",
+    "desc": "아래는 공간별 분위기를 보여드리기 위한 디자인 제안 이미지입니다. 상담에서 원하시는 방향을 함께 정리합니다.",
+    "btn": "컨셉 전체 보기",
+    "featured": [
+      "han-river-living",
+      "signature-bakery",
+      "garden-kitchen",
+      "private-dining",
+      "executive-lounge"
+    ]
+  },
+  "cta": {
+    "eyebrow": "Free Consultation",
+    "title": "현장 상담부터 편하게 시작하세요.",
+    "text": "전화나 견적 양식으로 연락 주시면 확인 후 안내드립니다.",
+    "btn": "견적 문의"
+  },
+  "faq": [
+    {
+      "q": "공사 기간은 얼마나 걸리나요?",
+      "a": "공사 규모에 따라 최소 5일에서 최장 2주가 걸리며, 현장 상황에 맞게 조율할 수 있습니다. 정확한 일정은 현장을 확인한 뒤 공정표로 안내드립니다."
+    },
+    {
+      "q": "철거만 맡길 수 있나요?",
+      "a": "가능합니다. 철거 전문 인력이 직접 진행합니다."
+    },
+    {
+      "q": "안산 외 지역도 시공하나요?",
+      "a": "경기도 전역을 중심으로 하고, 서울·인천 등 외부 지역도 거리와 공사 규모를 보고 상담합니다."
+    }
+  ],
+  "design": {
+    "eyebrow": "Design",
+    "title": "도면에서 3D까지, 공사 전에 확인합니다",
+    "desc": "사내 디자이너가 현장을 실측해 도면을 그리고, 3D 렌더링으로 완성 모습을 먼저 보여드립니다. 아래는 실제로 진행한 카페 하녹 프로젝트입니다.",
+    "note": "카페 하녹 프로젝트의 실제 평면도, 3D 렌더링, 시공 사진입니다.",
+    "stages": [
+      {
+        "no": "01",
+        "tab": "평면도",
+        "title": "실측 후 평면 도면",
+        "desc": "현장을 직접 실측해 치수가 들어간 평면 도면을 그립니다. 좌석, 카운터, 주방, 문 위치와 동선을 이 단계에서 확정합니다.",
+        "img": "assets/images/ansan-cafe/07.webp",
+        "contain": true,
+        "caption": "카페 하녹 · 실제 평면도"
+      },
+      {
+        "no": "02",
+        "tab": "3D 공간",
+        "title": "입체로 확인하는 공간",
+        "desc": "도면을 3D 공간으로 만들어 카운터, 좌석, 창가의 배치와 공간 크기를 입체로 확인합니다.",
+        "img": "assets/images/ansan-cafe/13.webp",
+        "contain": false,
+        "caption": "카페 하녹 · 3D 공간 구성"
+      },
+      {
+        "no": "03",
+        "tab": "3D 렌더링",
+        "title": "완성 모습 렌더링",
+        "desc": "재료와 조명을 입혀 완성된 모습을 사진처럼 보여드립니다. 색과 마감을 공사 전에 고르고 변경할 수 있습니다.",
+        "img": "assets/images/ansan-cafe/09.webp",
+        "contain": false,
+        "caption": "카페 하녹 · 3D 렌더링"
+      },
+      {
+        "no": "04",
+        "tab": "완공",
+        "title": "렌더링 그대로 시공",
+        "desc": "확정한 렌더링과 도면에 맞춰 시공합니다. 설계한 팀이 직접 시공하므로 현장 변경도 빠르게 반영됩니다.",
+        "img": "assets/images/ansan-cafe/34.webp",
+        "contain": false,
+        "caption": "카페 하녹 · 완공 사진"
+      }
+    ],
+    "link_text": "카페 하녹 프로젝트 전체 보기",
+    "link": "cases/cafe-hanok.html"
+  },
+  "testimonials": {
+    "eyebrow": "Client Voices",
+    "title": "고객 후기",
+    "desc": "실제 시공 후 고객님께 받은 후기만 올립니다.",
+    "items": []
+  },
+  "materials": {
+    "eyebrow": "Materials",
+    "title": "사용 자재",
+    "desc": "현장에 사용하는 마감재의 사양을 공개합니다.",
+    "items": []
+  }
+}

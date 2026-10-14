@@ -1,0 +1,21 @@
+name: 사이트 페이지 자동 생성
+on:
+  push:
+    branches: [main]
+    paths: ['content/**', 'gen.py']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python3 gen.py
+      - name: 변경된 페이지 저장
+        run: |
+          git config user.name "site-builder"
+          git config user.email "site-builder@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "페이지 자동 생성" && git push)

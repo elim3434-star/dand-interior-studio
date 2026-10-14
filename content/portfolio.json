@@ -1,0 +1,43 @@
+{
+  "seo_title": "시공 사례 | D& 인테리어",
+  "seo_desc": "의정부·성수·분당 프랜차이즈 식당 시공 사례를 볼 수 있습니다.",
+  "hero": {
+    "eyebrow": "Portfolio",
+    "title": "시공 사례",
+    "text": "실제로 시공한 현장 사진과 도면·3D 렌더링으로 정리했습니다.",
+    "img": "assets/images/svc/res_h2.webp"
+  },
+  "real": {
+    "eyebrow": "Completed",
+    "title": "시공 완료 사례",
+    "desc": "블로그와 인스타그램에서 더 많은 현장 사진을 볼 수 있습니다."
+  },
+  "concept": {
+    "eyebrow": "Design Concept",
+    "title": "공간별 디자인 컨셉",
+    "desc": "분위기를 보여드리기 위한 디자인 제안 이미지입니다. 어떤 분위기를 원하시는지 이야기하는 출발점으로 봐주세요."
+  },
+  "seo_keywords": "안산 인테리어 시공 사례, 카페 인테리어 사례, 상가 인테리어 포트폴리오",
+  "filters": {
+    "cat_names": {
+      "residential": "주거",
+      "commercial": "상업",
+      "bath": "뷰티·스파·욕실",
+      "office": "오피스",
+      "showroom": "쇼룸",
+      "facility": "시설·외부"
+    },
+    "styles": [
+      "모던",
+      "미니멀",
+      "모던 클래식",
+      "하이엔드"
+    ],
+    "sizes": [
+      "20평형대",
+      "30-40평형대",
+      "50평 이상",
+      "대형 상업공간"
+    ]
+  }
+}

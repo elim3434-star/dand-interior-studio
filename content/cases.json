@@ -1,0 +1,1218 @@
+{
+  "items": [
+    {
+      "place": "서울 반포",
+      "title": "현대반포빌라",
+      "desc": "빌라 · 주거 인테리어",
+      "img": "assets/images/cases/banpo-villa/01.webp",
+      "badge": "Residential · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "banpo-villa",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "서울 반포"
+        },
+        {
+          "k": "용도",
+          "v": "빌라"
+        }
+      ],
+      "intro": "현대반포빌라 시공 사진입니다.",
+      "gallery": [
+        {
+          "group": "거실 · 주방",
+          "img": "assets/images/cases/banpo-villa/01.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "거실 · 주방",
+          "img": "assets/images/cases/banpo-villa/02.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "거실 · 주방",
+          "img": "assets/images/cases/banpo-villa/03.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "거실 · 주방",
+          "img": "assets/images/cases/banpo-villa/04.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "욕실",
+          "img": "assets/images/cases/banpo-villa/05.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "욕실",
+          "img": "assets/images/cases/banpo-villa/06.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "욕실",
+          "img": "assets/images/cases/banpo-villa/07.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "드레스룸",
+          "img": "assets/images/cases/banpo-villa/08.webp",
+          "caption": "드레스룸"
+        }
+      ],
+      "cat": "residential",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "서울 반포 인테리어, 빌라 인테리어, 현대반포빌라",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "서울 삼성동",
+      "title": "삼성동 힐스테이트",
+      "desc": "아파트 · 주거 인테리어",
+      "img": "assets/images/cases/samseong-hillstate/01.webp",
+      "badge": "Residential · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "samseong-hillstate",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "서울 삼성동"
+        },
+        {
+          "k": "용도",
+          "v": "아파트"
+        }
+      ],
+      "intro": "삼성동 힐스테이트 시공 사진입니다.",
+      "gallery": [
+        {
+          "group": "거실 · 침실",
+          "img": "assets/images/cases/samseong-hillstate/01.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "거실 · 침실",
+          "img": "assets/images/cases/samseong-hillstate/02.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "현관 · 복도",
+          "img": "assets/images/cases/samseong-hillstate/03.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "현관 · 복도",
+          "img": "assets/images/cases/samseong-hillstate/04.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "현관 · 복도",
+          "img": "assets/images/cases/samseong-hillstate/05.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "욕실",
+          "img": "assets/images/cases/samseong-hillstate/06.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "욕실",
+          "img": "assets/images/cases/samseong-hillstate/07.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "욕실",
+          "img": "assets/images/cases/samseong-hillstate/08.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "수납 · 발코니",
+          "img": "assets/images/cases/samseong-hillstate/09.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "수납 · 발코니",
+          "img": "assets/images/cases/samseong-hillstate/10.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "residential",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "서울 삼성동 인테리어, 아파트 인테리어, 삼성동 힐스테이트",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "안산 단원구",
+      "title": "필라테스 안산 고잔점",
+      "desc": "필라테스 스튜디오 · 전체 인테리어 · 2D 도면 · 3D 시안",
+      "img": "assets/images/cases/pilates-gojan/04.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "pilates-gojan",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "안산 단원구"
+        },
+        {
+          "k": "용도",
+          "v": "필라테스 스튜디오"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어 · 2D 도면 · 3D 시안"
+        }
+      ],
+      "intro": "필라테스 안산 고잔점 프로젝트입니다. 전체 인테리어 · 2D 도면 · 3D 시안를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "2D 도면",
+          "img": "assets/images/cases/pilates-gojan/01.webp",
+          "caption": "실측을 바탕으로 작성한 도면"
+        },
+        {
+          "group": "3D 시안",
+          "img": "assets/images/cases/pilates-gojan/02.webp",
+          "caption": "공사 전에 3D로 확인한 완성 모습"
+        },
+        {
+          "group": "3D 시안",
+          "img": "assets/images/cases/pilates-gojan/03.webp",
+          "caption": "공사 전에 3D로 확인한 완성 모습"
+        },
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/pilates-gojan/04.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/pilates-gojan/05.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/pilates-gojan/06.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/pilates-gojan/07.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "안산 단원구 인테리어, 필라테스 스튜디오 인테리어, 필라테스 안산 고잔점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "안산 단원구",
+      "title": "소코아 안산 고잔점",
+      "desc": "식당 (프랜차이즈) · 전체 인테리어",
+      "img": "assets/images/cases/socoa-gojan/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "socoa-gojan",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "안산 단원구"
+        },
+        {
+          "k": "용도",
+          "v": "식당 (프랜차이즈)"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "소코아 안산 고잔점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/socoa-gojan/01.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/socoa-gojan/02.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "안산 단원구 인테리어, 식당 (프랜차이즈) 인테리어, 소코아 안산 고잔점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "수도권",
+      "title": "소코아 체인점",
+      "desc": "식당 (프랜차이즈) · 전체 인테리어",
+      "img": "assets/images/cases/socoa-chain/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "socoa-chain",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "수도권"
+        },
+        {
+          "k": "용도",
+          "v": "식당 (프랜차이즈)"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "소코아 체인점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/socoa-chain/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "수도권 인테리어, 식당 (프랜차이즈) 인테리어, 소코아 체인점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "화성 송산그린시티",
+      "title": "새솔동 단독주택",
+      "desc": "단독주택 · 전체 인테리어",
+      "img": "assets/images/cases/saesol-house/01.webp",
+      "badge": "Residential · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "saesol-house",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "화성 송산그린시티"
+        },
+        {
+          "k": "용도",
+          "v": "단독주택"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "새솔동 단독주택 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/saesol-house/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "residential",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "화성 송산그린시티 인테리어, 단독주택 인테리어, 새솔동 단독주택",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "광명",
+      "title": "광명동 할매포차",
+      "desc": "주점 · 전체 인테리어",
+      "img": "assets/images/cases/gwangmyeong-halmae/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "gwangmyeong-halmae",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "광명"
+        },
+        {
+          "k": "용도",
+          "v": "주점"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "광명동 할매포차 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/gwangmyeong-halmae/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "광명 인테리어, 주점 인테리어, 광명동 할매포차",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "안산 단원구",
+      "title": "카페 하녹",
+      "desc": "카페 · 전체 인테리어 · 2D 도면 · 3D 시안",
+      "img": "assets/images/cases/cafe-hanok/03.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "cafe-hanok",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "안산 단원구"
+        },
+        {
+          "k": "용도",
+          "v": "카페"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어 · 2D 도면 · 3D 시안"
+        }
+      ],
+      "intro": "카페 하녹 프로젝트입니다. 전체 인테리어 · 2D 도면 · 3D 시안를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "2D 도면",
+          "img": "assets/images/cases/cafe-hanok/01.webp",
+          "caption": "실측을 바탕으로 작성한 도면"
+        },
+        {
+          "group": "3D 시안",
+          "img": "assets/images/cases/cafe-hanok/02.webp",
+          "caption": "공사 전에 3D로 확인한 완성 모습"
+        },
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/cafe-hanok/03.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "안산 단원구 인테리어, 카페 인테리어, 카페 하녹",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "수도권",
+      "title": "외부 데크 및 난간",
+      "desc": "외부 시설 · 부분 익스테리어",
+      "img": "assets/images/cases/exterior-deck/01.webp",
+      "badge": "Facility · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "exterior-deck",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "수도권"
+        },
+        {
+          "k": "용도",
+          "v": "외부 시설"
+        },
+        {
+          "k": "진행 범위",
+          "v": "부분 익스테리어"
+        }
+      ],
+      "intro": "외부 데크 및 난간 프로젝트입니다. 부분 익스테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "시공 사진",
+          "img": "assets/images/cases/exterior-deck/01.webp",
+          "caption": "시공 현장"
+        }
+      ],
+      "cat": "facility",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "수도권 인테리어, 외부 시설 인테리어, 외부 데크 및 난간",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "수도권",
+      "title": "학원",
+      "desc": "학원 · 전체 인테리어",
+      "img": "assets/images/cases/academy/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "academy",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "수도권"
+        },
+        {
+          "k": "용도",
+          "v": "학원"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "학원 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/academy/01.webp",
+          "caption": "완공 후 현장"
+        },
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/academy/02.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "수도권 인테리어, 학원 인테리어, 학원",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "시흥 배곧",
+      "title": "배곧 초등학교 계단 개선공사",
+      "desc": "학교 시설 · 부분 인테리어",
+      "img": "assets/images/cases/baegot-school-stairs/01.webp",
+      "badge": "Facility · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "baegot-school-stairs",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "시흥 배곧"
+        },
+        {
+          "k": "용도",
+          "v": "학교 시설"
+        },
+        {
+          "k": "진행 범위",
+          "v": "부분 인테리어"
+        }
+      ],
+      "intro": "배곧 초등학교 계단 개선공사 프로젝트입니다. 부분 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "시공 사진",
+          "img": "assets/images/cases/baegot-school-stairs/01.webp",
+          "caption": "시공 현장"
+        }
+      ],
+      "cat": "facility",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "시흥 배곧 인테리어, 학교 시설 인테리어, 배곧 초등학교 계단 개선공사",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "부천",
+      "title": "이자카야 zibe 부천점",
+      "desc": "이자카야 · 부분 인테리어",
+      "img": "assets/images/cases/zibe-bucheon/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "zibe-bucheon",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "부천"
+        },
+        {
+          "k": "용도",
+          "v": "이자카야"
+        },
+        {
+          "k": "진행 범위",
+          "v": "부분 인테리어"
+        }
+      ],
+      "intro": "이자카야 zibe 부천점 프로젝트입니다. 부분 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/zibe-bucheon/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "부천 인테리어, 이자카야 인테리어, 이자카야 zibe 부천점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "광명",
+      "title": "소소미칼국수 광명점",
+      "desc": "식당 · 전체 인테리어",
+      "img": "assets/images/cases/soso-kalguksu/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "soso-kalguksu",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "광명"
+        },
+        {
+          "k": "용도",
+          "v": "식당"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "소소미칼국수 광명점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/soso-kalguksu/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "광명 인테리어, 식당 인테리어, 소소미칼국수 광명점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "수도권",
+      "title": "냉면가준",
+      "desc": "식당 · 전체 인테리어",
+      "img": "assets/images/cases/naengmyeon-gajun/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "naengmyeon-gajun",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "수도권"
+        },
+        {
+          "k": "용도",
+          "v": "식당"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "냉면가준 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/naengmyeon-gajun/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "수도권 인테리어, 식당 인테리어, 냉면가준",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "수원 인계동",
+      "title": "팔도만족 인계점",
+      "desc": "식당 (프랜차이즈) · 전체 인테리어",
+      "img": "assets/images/cases/paldo-ingye/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "paldo-ingye",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "수원 인계동"
+        },
+        {
+          "k": "용도",
+          "v": "식당 (프랜차이즈)"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "팔도만족 인계점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/paldo-ingye/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "수원 인계동 인테리어, 식당 (프랜차이즈) 인테리어, 팔도만족 인계점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "서울 신정동",
+      "title": "이자카야 키주 신정동점",
+      "desc": "이자카야 · 전체 인테리어",
+      "img": "assets/images/cases/kiju-sinjeong/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "kiju-sinjeong",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "서울 신정동"
+        },
+        {
+          "k": "용도",
+          "v": "이자카야"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "이자카야 키주 신정동점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/kiju-sinjeong/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "서울 신정동 인테리어, 이자카야 인테리어, 이자카야 키주 신정동점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "서울 신촌",
+      "title": "샤브온미 신촌점",
+      "desc": "식당 · 전체 인테리어",
+      "img": "assets/images/cases/shabuonmi-sinchon/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "shabuonmi-sinchon",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "서울 신촌"
+        },
+        {
+          "k": "용도",
+          "v": "식당"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "샤브온미 신촌점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/shabuonmi-sinchon/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "서울 신촌 인테리어, 식당 인테리어, 샤브온미 신촌점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "안산",
+      "title": "안산 아스타로",
+      "desc": "매장 · 전체 인테리어",
+      "img": "assets/images/cases/ansan-astaro/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "ansan-astaro",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "안산"
+        },
+        {
+          "k": "용도",
+          "v": "매장"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "안산 아스타로 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/ansan-astaro/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "안산 인테리어, 매장 인테리어, 안산 아스타로",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "수원",
+      "title": "뜯갈비 수원점",
+      "desc": "식당 (프랜차이즈) · 전체 인테리어",
+      "img": "assets/images/cases/ddeutgalbi-suwon/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "ddeutgalbi-suwon",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "수원"
+        },
+        {
+          "k": "용도",
+          "v": "식당 (프랜차이즈)"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "뜯갈비 수원점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/ddeutgalbi-suwon/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "수원 인테리어, 식당 (프랜차이즈) 인테리어, 뜯갈비 수원점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "수원 인계동",
+      "title": "뜯갈비 인계점",
+      "desc": "식당 (프랜차이즈) · 전체 인테리어",
+      "img": "assets/images/cases/ddeutgalbi-ingye/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "ddeutgalbi-ingye",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "수원 인계동"
+        },
+        {
+          "k": "용도",
+          "v": "식당 (프랜차이즈)"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "뜯갈비 인계점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/ddeutgalbi-ingye/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "수원 인계동 인테리어, 식당 (프랜차이즈) 인테리어, 뜯갈비 인계점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "인천 주안",
+      "title": "신주옥미 주안점",
+      "desc": "식당 (프랜차이즈) · 전체 인테리어",
+      "img": "assets/images/cases/sinjuokmi-juan/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "sinjuokmi-juan",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "인천 주안"
+        },
+        {
+          "k": "용도",
+          "v": "식당 (프랜차이즈)"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "신주옥미 주안점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/sinjuokmi-juan/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "인천 주안 인테리어, 식당 (프랜차이즈) 인테리어, 신주옥미 주안점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "부천 신중동",
+      "title": "신주옥미 신중동점",
+      "desc": "식당 (프랜차이즈) · 전체 인테리어",
+      "img": "assets/images/cases/sinjuokmi-sinjungdong/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "sinjuokmi-sinjungdong",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "부천 신중동"
+        },
+        {
+          "k": "용도",
+          "v": "식당 (프랜차이즈)"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "신주옥미 신중동점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/sinjuokmi-sinjungdong/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "부천 신중동 인테리어, 식당 (프랜차이즈) 인테리어, 신주옥미 신중동점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "인천 연수",
+      "title": "신주옥미 연수점",
+      "desc": "식당 (프랜차이즈) · 전체 인테리어",
+      "img": "assets/images/cases/sinjuokmi-yeonsu/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "sinjuokmi-yeonsu",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "인천 연수"
+        },
+        {
+          "k": "용도",
+          "v": "식당 (프랜차이즈)"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "신주옥미 연수점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/sinjuokmi-yeonsu/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "인천 연수 인테리어, 식당 (프랜차이즈) 인테리어, 신주옥미 연수점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "안성",
+      "title": "신주옥미 안성점",
+      "desc": "식당 (프랜차이즈) · 전체 인테리어",
+      "img": "assets/images/cases/sinjuokmi-anseong/01.webp",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "프로젝트 전체 보기",
+      "link": "",
+      "slug": "sinjuokmi-anseong",
+      "facts": [
+        {
+          "k": "위치",
+          "v": "안성"
+        },
+        {
+          "k": "용도",
+          "v": "식당 (프랜차이즈)"
+        },
+        {
+          "k": "진행 범위",
+          "v": "전체 인테리어"
+        }
+      ],
+      "intro": "신주옥미 안성점 프로젝트입니다. 전체 인테리어를 진행했습니다.",
+      "gallery": [
+        {
+          "group": "완공 사진",
+          "img": "assets/images/cases/sinjuokmi-anseong/01.webp",
+          "caption": "완공 후 현장"
+        }
+      ],
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "안성 인테리어, 식당 (프랜차이즈) 인테리어, 신주옥미 안성점",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "의정부",
+      "title": "신주옥미 의정부점",
+      "desc": "순대국 프랜차이즈 식당 인테리어",
+      "img": "assets/images/case1.jpg",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "블로그에서 사진 보기",
+      "link": "https://blog.naver.com/theproper",
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "성수",
+      "title": "신주옥미 성수점",
+      "desc": "순대국 프랜차이즈 식당 인테리어",
+      "img": "assets/images/case2.jpg",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "블로그에서 사진 보기",
+      "link": "https://blog.naver.com/theproper",
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    },
+    {
+      "place": "분당",
+      "title": "신주옥미 분당점",
+      "desc": "순대국 프랜차이즈 식당 인테리어",
+      "img": "assets/images/case3.jpg",
+      "badge": "Commercial · 시공 완료",
+      "link_text": "블로그에서 사진 보기",
+      "link": "https://blog.naver.com/theproper",
+      "cat": "commercial",
+      "style_filter": "",
+      "size_filter": "",
+      "seo_keywords": "",
+      "before_after": [],
+      "videos": [],
+      "blog_posts": [],
+      "testimonial": {
+        "quote": "",
+        "who": ""
+      }
+    }
+  ]
+}
