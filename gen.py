@@ -210,6 +210,8 @@ def build_index():
     feat=[BYSLUG[k] for k in H['concept']['featured'] if k in BYSLUG]
     cc=''.join(concept_card(p,0,spans[i%5] if i<5 else 'span-4 mid') for i,p in enumerate(feat))
     concept_home=(f'<section class="section-sm" style="padding-top:0"><div class="wrap">{sec_head(H["concept"])}<div class="portfolio-grid">{cc}</div><p style="margin-top:22px"><a class="btn secondary" href="portfolio.html#concept">{e(H["concept"]["btn"])}</a></p></div></section>' if feat else '')
+    _ph=H['process'].get('phases')
+    process_body=('<div class="phases">'+''.join(f'<article class="phase"><span class="ph-no">{e(x["no"])}</span><span class="ph-en">{e(x["en"])}</span><h3>{e(x["t"])}</h3><ul>'+''.join(f'<li>{e(i)}</li>' for i in x['items'])+'</ul></article>' for x in _ph)+'</div>') if _ph else flow_html()+f'<div class="steps8">{steps}</div>'
     faq=''.join(f'<article class="faq-item"><h4>{t(x["q"])}</h4><p>{t(x["a"])}</p></article>' for x in H['faq'])
     ds=H['design']; svgs=[viz.plan2d(),viz.iso3d()]
     tabs=''.join(f'<button type="button" class="d-tab{" on" if i==0 else ""}" data-i="{i}"><span class="d-no">{e(x["no"])}</span><span class="d-tt"><strong>{e(x["title"])}</strong><small>{t(x["desc"])}</small></span></button>' for i,x in enumerate(ds['stages']))
@@ -242,7 +244,7 @@ def build_index():
   <section class="section-sm" style="padding-top:0"><div class="wrap">{sec_head(H['cases'],False,social_icons())}<div class="real-grid">{real_cards(0,6)}</div><p style="text-align:center;margin:28px 0 0"><a class="btn secondary" href="portfolio.html">시공 사례 전체 보기 ↗</a></p></div></section>
   <section class="section-sm" style="padding-top:0"><div class="wrap">{sec_head(sc)}
     <div class="sched" style="--n:{len(sc['weeks'])}" role="table" aria-label="{e(sc['aria'])}"><div class="s-head"></div>{weeks}{rows}</div></div></section>
-  <section class="section-sm" style="padding-top:0"><div class="wrap">{sec_head(H['process'])}{flow_html()}<div class="steps8">{steps}</div></div></section>
+  <section class="section-sm" style="padding-top:0"><div class="wrap">{sec_head(H['process'])}{process_body}</div></section>
   {materials_html()}
   {testimonials_html()}
   {concept_home}
