@@ -40,6 +40,8 @@ collections:
           - { label: "시공 지역", name: region, widget: string }
           - { label: "메타 픽셀 ID (숫자만, 인스타 광고 리타겟팅용)", name: meta_pixel_id, widget: string, required: false }
           - { label: "메타 도메인 인증 코드 (facebook-domain-verification 값)", name: meta_domain_verification, widget: string, required: false }
+          - { label: "직통 번호 (문자 수신용, 비워도 됨)", name: tel_direct, widget: string, required: false }
+          - { label: "직통 번호 표시 이름", name: tel_direct_label, widget: string, required: false }
           - { label: "사업자 상호", name: biz_name, widget: string, required: false }
           - { label: "대표자", name: biz_rep, widget: string, required: false }
           - { label: "사업자등록번호", name: biz_regno, widget: string, required: false }

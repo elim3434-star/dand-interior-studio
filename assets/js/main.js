@@ -68,7 +68,7 @@ window.enhanceSelect=function(sel){
       document.getElementById('outputText').textContent=t;
       document.getElementById('outputBox').classList.add('on');
       var tel=(window.DAND_TEL||'07077771114');
-      var sm=document.getElementById('smsLink'); sm.href='sms:'+tel+'?body='+encodeURIComponent(t); if(/^070/.test(tel)) sm.style.display='none';
+      var sm=document.getElementById('smsLink'); var sn=window.DAND_SMS||''; if(sn){sm.href='sms:'+sn+'?body='+encodeURIComponent(t);} else {sm.style.display='none';}
       document.getElementById('mailLink').href='mailto:'+(window.DAND_MAIL||'theproper@naver.com')+'?subject='+encodeURIComponent('[견적문의] '+g('siteName'))+'&body='+encodeURIComponent(t);
       document.getElementById('outputBox').scrollIntoView({behavior:'smooth',block:'nearest'});
     });

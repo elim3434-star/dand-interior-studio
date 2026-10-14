@@ -11,7 +11,7 @@ def load(n): return json.load(open(os.path.join(ROOT,'content',n),encoding='utf-
 S=load('site.json'); H=load('home.json'); A=load('about.json'); P=load('portfolio.json'); C=load('contact.json')
 CASES=load('cases.json')['items']; CP=load('concepts.json'); PROJECTS=CP['items'] if CP.get('enabled',True) else []; PG=CP['page']
 BYSLUG={p['slug']:p for p in PROJECTS}
-TEL=S['tel']; TELH=''.join(ch for ch in TEL if ch.isdigit()); MAIL=S['mail']; ADDR=S['addr']; INSTA=S['insta']; BLOG=S['blog']
+TELD=S.get('tel_direct','');TELDH=''.join(ch for ch in TELD if ch.isdigit());TEL=S['tel']; TELH=''.join(ch for ch in TEL if ch.isdigit()); MAIL=S['mail']; ADDR=S['addr']; INSTA=S['insta']; BLOG=S['blog']
 
 def e(s): return html.escape(str(s),quote=True)
 def t(s): return e(s).replace('\n','<br>')
@@ -104,7 +104,7 @@ def footer(depth=0):
   <div><a href="{e(INSTA)}" target="_blank" rel="noopener">Instagram</a> · <a href="{e(BLOG)}" target="_blank" rel="noopener">Blog</a>{(' · <a href="'+e(S['youtube'])+'" target="_blank" rel="noopener">YouTube</a>') if S.get('youtube') else ''}{(' · <a href="'+e(S['pinterest'])+'" target="_blank" rel="noopener">Pinterest</a>') if S.get('pinterest') else ''}<br>{e(S['footer_note'])} · <a href="{p}privacy.html">개인정보처리방침</a></div>
 </div></footer>
 <div class="floating-cta"><a href="{p}contact.html#quoteForm">{e(S['float_quote'])}</a><a class="alt" href="tel:{TELH}">{e(S['float_tel'])}</a></div>
-<script>window.DAND_TEL="{TELH}";window.DAND_MAIL="{e(MAIL)}";</script>
+<script>window.DAND_TEL="{TELH}";window.DAND_SMS="{TELDH}";window.DAND_MAIL="{e(MAIL)}";</script>
 <script src="{p}assets/js/main.js"></script>
 </body></html>
 '''
@@ -314,6 +314,7 @@ def build_portfolio():
 '''+footer(0)
 
 def build_contact():
+    direct_item=(f'<dl class="line-item"><dt>{e(S.get("tel_direct_label","직통"))}</dt><dd class="big-contact"><a href="sms:{TELDH}">{e(TELD)}</a></dd></dl>' if TELD else '')
     d=C['direct']; f=C['form']; CALC=C['calc']
     to=''.join(f'<option>{e(x)}</option>' for x in f['types']); so=''.join(f'<option>{e(x)}</option>' for x in f['scopes']); so2=''.join(f'<option>{e(x)}</option>' for x in f.get('sources',[])); bo=''.join(f'<option>{e(x)}</option>' for x in f.get('budgets',[]))
     return head(C['seo_title'],C['seo_desc'],path="contact.html",keywords=C.get('seo_keywords',''))+topbar(0,'contact')+f'''<main id="main">
@@ -323,7 +324,7 @@ def build_contact():
 <p class="muted" style="font-size:14px;margin:10px 0 4px" id="calcKindNote"></p><p class="muted" style="font-size:14px;margin:0 0 14px">{t(CALC['note'])}</p><a class="btn primary" href="#quoteForm" id="calcGo">{e(CALC['btn'])}</a></div></div></section>
 <section class="section"><div class="wrap contact-grid">
 <div class="card-panel contact-card"><span class="eyebrow">{e(d['eyebrow'])}</span><h2 class="title-lg">{t(d['title'])}</h2>
-<div class="line-list"><dl class="line-item"><dt>전화</dt><dd class="big-contact">{e(TEL)}</dd></dl><dl class="line-item"><dt>이메일</dt><dd>{e(MAIL)}</dd></dl><dl class="line-item"><dt>주소</dt><dd>{e(ADDR)}</dd></dl><dl class="line-item"><dt>Instagram</dt><dd><a href="{e(INSTA)}" target="_blank" rel="noopener">{e(INSTA.rstrip('/').split('/')[-1] and '@'+INSTA.rstrip('/').split('/')[-1])}</a></dd></dl><dl class="line-item"><dt>Blog</dt><dd><a href="{e(BLOG)}" target="_blank" rel="noopener">{e(BLOG.replace('https://',''))}</a></dd></dl></div>
+<div class="line-list"><dl class="line-item"><dt>대표번호</dt><dd class="big-contact">{e(TEL)}</dd></dl>{direct_item}<dl class="line-item"><dt>이메일</dt><dd>{e(MAIL)}</dd></dl><dl class="line-item"><dt>주소</dt><dd>{e(ADDR)}</dd></dl><dl class="line-item"><dt>Instagram</dt><dd><a href="{e(INSTA)}" target="_blank" rel="noopener">{e(INSTA.rstrip('/').split('/')[-1] and '@'+INSTA.rstrip('/').split('/')[-1])}</a></dd></dl><dl class="line-item"><dt>Blog</dt><dd><a href="{e(BLOG)}" target="_blank" rel="noopener">{e(BLOG.replace('https://',''))}</a></dd></dl></div>
 <div class="inline-actions" style="margin-top:22px"><a class="btn primary" href="tel:{TELH}">{e(d['btn_tel'])}</a><a class="btn secondary" href="mailto:{e(MAIL)}">{e(d['btn_mail'])}</a></div></div>
 <form class="card-panel form-card" id="quoteForm" novalidate><span class="eyebrow">{e(f['eyebrow'])}</span><h2 class="title-lg">{t(f['title'])}</h2><p class="muted" style="margin-top:-2px;margin-bottom:22px">{t(f['intro'])}</p>
 <div class="form-grid">
