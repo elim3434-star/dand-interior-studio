@@ -41,6 +41,8 @@ def meta_extra():
     out=''
     v=str(S.get('meta_domain_verification','')).strip()
     if v: out+=f'\n  <meta name="facebook-domain-verification" content="{e(v)}">'
+    nv=str(S.get('naver_site_verification','')).strip()
+    if nv: out+=f'\n  <meta name="naver-site-verification" content="{e(nv)}">'
     pid=re.sub(r'\D','',str(S.get('meta_pixel_id','')))
     if pid:
         out+=("\n  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','"+pid+"');fbq('track','PageView');</script>"

@@ -40,6 +40,7 @@ collections:
           - { label: "시공 지역", name: region, widget: string }
           - { label: "메타 픽셀 ID (숫자만, 인스타 광고 리타겟팅용)", name: meta_pixel_id, widget: string, required: false }
           - { label: "메타 도메인 인증 코드 (facebook-domain-verification 값)", name: meta_domain_verification, widget: string, required: false }
+          - { label: "네이버 서치어드바이저 소유확인 코드 (naver-site-verification 값)", name: naver_site_verification, widget: string, required: false }
           - { label: "유튜브 채널 주소(URL, 있을 때만)", name: youtube, widget: string, required: false }
           - label: "외부 후기 링크 (네이버 플레이스·블로그·구글 리뷰)"
             name: review_links
