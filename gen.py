@@ -93,10 +93,14 @@ def topbar(depth=0, active=''):
 </header>
 '''
 
+def biz_line():
+    if not S.get('biz_regno'): return ''
+    return f'<br>상호 {e(S["biz_name"])} · 대표 {e(S["biz_rep"])} · 사업자등록번호 {e(S["biz_regno"])}'
+
 def footer(depth=0):
     p='../'*depth
     return f'''<footer class="footer"><div class="wrap footer-row">
-  <div><strong>{e(S['brand'])}</strong> · {e(S['footer_line'])}<br>{e(ADDR)} · {e(TEL)} · {e(MAIL)}</div>
+  <div><strong>{e(S['brand'])}</strong> · {e(S['footer_line'])}<br>{e(ADDR)} · {e(TEL)} · {e(MAIL)}{biz_line()}</div>
   <div><a href="{e(INSTA)}" target="_blank" rel="noopener">Instagram</a> · <a href="{e(BLOG)}" target="_blank" rel="noopener">Blog</a>{(' · <a href="'+e(S['youtube'])+'" target="_blank" rel="noopener">YouTube</a>') if S.get('youtube') else ''}{(' · <a href="'+e(S['pinterest'])+'" target="_blank" rel="noopener">Pinterest</a>') if S.get('pinterest') else ''}<br>{e(S['footer_note'])} · <a href="{p}privacy.html">개인정보처리방침</a></div>
 </div></footer>
 <div class="floating-cta"><a href="{p}contact.html#quoteForm">{e(S['float_quote'])}</a><a class="alt" href="tel:{TELH}">{e(S['float_tel'])}</a></div>
@@ -386,7 +390,7 @@ def build_privacy():
 <h2 class="title-md" style="margin-top:28px">4. 보유 및 파기</h2><p>상담이 종료되면 지체 없이 파기합니다. 계약이 체결된 경우 관련 법령이 정한 기간 동안만 보관합니다.</p>
 <h2 class="title-md" style="margin-top:28px">5. 제3자 제공</h2><p>법령에 근거한 경우를 제외하고 동의 없이 제3자에게 제공하지 않습니다.</p>
 <h2 class="title-md" style="margin-top:28px">6. 방문 통계</h2><p>사이트 이용 통계(방문 수, 문의 버튼 클릭 등)를 위해 광고·분석 도구를 사용하는 경우가 있으며, 이 경우 쿠키 등으로 접속 정보가 수집될 수 있습니다. 브라우저 설정에서 쿠키를 거부할 수 있습니다.</p>
-<h2 class="title-md" style="margin-top:28px">7. 이용자의 권리와 문의</h2><p>열람·정정·삭제를 요청하실 수 있습니다. 문의: {e(TEL)} · {e(MAIL)}</p>
+<h2 class="title-md" style="margin-top:28px">7. 이용자의 권리와 문의</h2><p>열람·정정·삭제를 요청하실 수 있습니다. 개인정보 보호책임자: {e(S.get('biz_rep',''))} (대표) · 문의: {e(TEL)} · {e(MAIL)}</p>
 <p class="muted" style="margin-top:28px">시행일: 사이트 공개일부터 적용합니다.</p></div></section></main>'''
     return head('개인정보처리방침 | '+S['brand'],'D& 인테리어 개인정보처리방침',path="privacy.html")+topbar(0,'privacy')+body+footer(0)
 
