@@ -406,33 +406,42 @@ def build_404():
 
 def build_ad():
     D=load('ad.json'); by={r.get('slug'):r for r in CASES}
-    stats=''.join(f'<div class="ad-stat"><div class="ad-num"><span data-count="{x["to"]}">{x["to"]}</span>{e(x["suffix"])}</div><div class="ad-lab">{e(x["label"])}</div><p>{e(x["note"])}</p></div>' for x in D['stats'])
-    prom=''.join(f'<div class="ad-prom"><b>0{i+1}</b><h3>{e(x["t"])}</h3><p>{e(x["d"])}</p></div>' for i,x in enumerate(D['promise']))
+    R=D['record']; W=D['why']
+    stats=''.join(f'<div class="ad-stat rv"><div class="ad-num"><span data-count="{x["to"]}">{x["to"]}</span>{e(x["suffix"])}</div><div class="ad-lab">{e(x["label"])}</div></div>' for x in R['stats'])
+    cat_ko={'residential':'주거','commercial':'상업','facility':'시설'}
     cs=''
     for sl in D['cases']:
         r=by.get(sl)
         if not r: continue
-        cs+=f'<a class="ad-case" href="cases/{e(sl)}.html"><img src="{e(r["img"])}" alt="{e(r["title"])} 시공 사진"><span>{e(r["title"])}</span></a>'
+        cs+=f'<a class="ad-case" href="cases/{e(sl)}.html"><img src="{e(r["img"])}" alt="{e(r["title"])} 시공 사진"><i>{cat_ko.get(r.get("cat"),"")}</i><span>{e(r["title"])}</span></a>'
+    prom=''.join(f'<div class="ad-prom rv"><b>0{i+1}</b><h3>{e(x["t"])}</h3><p>{e(x["d"])}</p></div>' for i,x in enumerate(D['promise']))
+    ph=''.join(f'<div class="ad-step rv"><b>{e(x["no"])}</b><h3>{e(x["t"])}</h3><p>{" · ".join(e(i) for i in x["items"])}</p></div>' for x in H['process']['phases'])
     tel_link=f'tel:{TELH}'; sms=f'sms:{TELDH}' if TELDH else ''
     sms_btn=f'<a class="ad-btn ghost" href="{sms}">문자 상담</a>' if sms else ''
+    lines=''.join(f'<p class="rv">{e(l)}</p>' for l in W['lines'])
     body=f'''<main id="main" class="ad">
 <header class="ad-top"><a class="ad-brand" href="index.html" aria-label="{e(S['brand'])} 홈페이지"><img src="assets/images/logo-mark-white.png" alt="" width="44" height="42"><strong>{e(S['brand'])}</strong></a><a class="ad-btn small" href="{tel_link}">전화 상담</a></header>
-<section class="ad-hero"><img class="hero" src="{e(D['hero_img'])}" alt="" fetchpriority="high"><div class="ad-hero-in"><span class="ad-eyebrow">{e(D['eyebrow'])}</span><h1>{D['title_html']}</h1><p>{e(D['sub'])}</p><div class="ad-actions"><a class="ad-btn" href="{tel_link}">무료 전화 상담</a>{sms_btn}</div></div></section>
-<section class="ad-sec"><div class="ad-wrap"><div class="ad-stats">{stats}</div></div></section>
-<section class="ad-sec alt"><div class="ad-wrap"><h2 class="ad-h2">{e(D['promise_title'])}</h2><div class="ad-proms">{prom}</div></div></section>
-<section class="ad-sec"><div class="ad-wrap"><h2 class="ad-h2">{e(D['cases_title'])}</h2><div class="ad-cases">{cs}</div><p class="ad-more"><a href="portfolio.html">시공 사례 전체 보기 →</a></p></div></section>
-<section class="ad-sec cta"><div class="ad-wrap"><h2 class="ad-h2">{e(D['cta_title'])}</h2><p class="ad-sub">{e(D['cta_sub'])}</p><div class="ad-actions center"><a class="ad-btn" href="{tel_link}">전화 상담 {e(TEL)}</a>{sms_btn}<a class="ad-btn ghost" href="contact.html#quoteForm">견적 문의 남기기</a></div></div></section>
+<section class="ad-hero"><img class="hero" src="{e(D['hero_img'])}" alt="" fetchpriority="high"><div class="ad-hero-in"><span class="ad-eyebrow">{e(D['eyebrow'])}</span><h1>{D['title_html']}</h1><p>{e(D['sub'])}</p><div class="ad-actions"><a class="ad-btn" href="{tel_link}">무료 전화 상담</a>{sms_btn}</div></div><div class="ad-scroll">SCROLL</div></section>
+<section class="ad-sec"><div class="ad-wrap"><span class="ad-eb rv">{e(R['eyebrow'])}</span><h2 class="ad-h2 rv">{R['title_html']}</h2><p class="ad-sub rv">{e(R['sub'])}</p><div class="ad-stats">{stats}</div></div></section>
+<section class="ad-sec alt"><div class="ad-wrap"><span class="ad-eb rv">{e(D['cases_eyebrow'])}</span><h2 class="ad-h2 rv">{D['cases_title_html']}</h2></div><div class="ad-track" tabindex="0" aria-label="시공 사례 목록">{cs}</div><p class="ad-more"><a href="portfolio.html">시공 사례 전체 보기 →</a></p></section>
+<section class="ad-sec"><div class="ad-wrap"><span class="ad-eb rv">{e(W['eyebrow'])}</span><h2 class="ad-h2 rv">{W['title_html']}</h2><p class="ad-sub rv">{W['sub']}</p><div class="ad-lines">{lines}</div></div></section>
+<section class="ad-sec alt"><div class="ad-wrap"><span class="ad-eb rv">{e(D['promise_eyebrow'])}</span><h2 class="ad-h2 rv">{D['promise_title_html']}</h2><div class="ad-proms">{prom}</div></div></section>
+<section class="ad-sec"><div class="ad-wrap"><span class="ad-eb rv">{e(D['process_eyebrow'])}</span><h2 class="ad-h2 rv">{D['process_title_html']}</h2><p class="ad-sub rv">{e(D['process_sub'])}</p><div class="ad-steps">{ph}</div></div></section>
+<section class="ad-sec cta"><div class="ad-wrap"><span class="ad-eb rv">{e(D['cta_eyebrow'])}</span><h2 class="ad-h2 rv">{D['cta_title_html']}</h2><p class="ad-sub rv">{D['cta_sub']}</p><div class="ad-actions center"><a class="ad-btn big" href="{tel_link}">{e(D['cta_btn'])} · {e(TEL)}</a>{sms_btn}<a class="ad-btn ghost" href="contact.html#quoteForm">견적 문의 남기기</a></div></div></section>
 <footer class="ad-foot"><p><strong>{e(S['brand'])}</strong> · {e(ADDR)}</p>{biz_line()}<p><a href="privacy.html">개인정보처리방침</a> · <a href="index.html">홈페이지</a></p></footer>
 </main>
 <div class="ad-bar"><a href="{tel_link}">전화 상담</a>{('<a class="alt" href="'+sms+'">문자 상담</a>') if sms else ''}</div>
 <link rel="stylesheet" href="assets/ad.css">
 <script>window.DAND_TEL="{TELH}";window.DAND_SMS="{TELDH}";</script>
-<script>(function(){{var els=document.querySelectorAll('[data-count]');function run(el){{var to=+el.dataset.count,d=1400,t0=null;function f(t){{if(!t0)t0=t;var p=Math.min((t-t0)/d,1),v=1+(to-1)*(1-Math.pow(1-p,3));el.textContent=Math.round(v);if(p<1)requestAnimationFrame(f)}}requestAnimationFrame(f)}}
-if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var io=new IntersectionObserver(function(en){{en.forEach(function(x){{if(x.isIntersecting){{run(x.target);io.unobserve(x.target)}}}})}},{{threshold:.6}});els.forEach(function(el){{el.textContent='1';io.observe(el)}});}})();
+<script>(function(){{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!('IntersectionObserver' in window)||rm)return;document.documentElement.classList.add('js');
+function run(el){{var to=+el.dataset.count,d=1400,t0=null;function f(t){{if(!t0)t0=t;var p=Math.min((t-t0)/d,1);el.textContent=Math.round(1+(to-1)*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}}requestAnimationFrame(f)}}
+var io=new IntersectionObserver(function(en){{en.forEach(function(x){{if(!x.isIntersecting)return;x.target.classList.add('in');var c=x.target.querySelector('[data-count]');if(c)run(c);io.unobserve(x.target)}})}},{{threshold:.35}});
+document.querySelectorAll('.rv').forEach(function(el){{io.observe(el);var c=el.querySelector('[data-count]');if(c)c.textContent='1'}});}})();
 document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="sms:"]');if(a){{try{{if(window.fbq)fbq('track','Contact')}}catch(_){{}}}}}});</script>
 </body></html>'''
     h=head(D['title'],D['desc'],path='ad.html').replace('<meta name="theme-color"','<meta name="robots" content="noindex,follow">\n  <meta name="theme-color"')
     return h+body
+
 
 import re as _re
 try:
