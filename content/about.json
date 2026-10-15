@@ -1,10 +1,10 @@
 {
-  "seo_title": "소개 | D& 인테리어",
-  "seo_desc": "설계부터 철거, 시공까지 한 팀이 진행하는 수도권 D& 인테리어를 소개합니다.",
+  "seo_title": "소개 | 디앤",
+  "seo_desc": "설계부터 철거, 시공까지 한 팀이 진행하는 수도권 디앤를 소개합니다.",
   "hero": {
     "eyebrow": "About",
     "title": "공간이 쓰이는 방식부터 설계합니다.",
-    "text": "D& 인테리어는 설계, 철거, 시공을 한 팀으로 묶어 상가와 아파트를 만듭니다.",
+    "text": "디앤은 설계, 철거, 시공을 한 팀으로 묶어 상가와 아파트를 만듭니다.",
     "img": "assets/images/ansan-cafe/27.webp"
   },
   "story": {
@@ -40,7 +40,7 @@
     "items": [
       {
         "k": "상호",
-        "v": "D& 인테리어 (Design studio D&)"
+        "v": "디앤 (Design studio D&)"
       },
       {
         "k": "소재지",
@@ -76,7 +76,7 @@
   "history": {
     "eyebrow": "History",
     "title": "연혁",
-    "desc": "D& 인테리어가 걸어온 길입니다.",
+    "desc": "디앤이 걸어온 길입니다.",
     "items": [
       {
         "date": "2021.11",
