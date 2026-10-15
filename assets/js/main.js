@@ -61,7 +61,7 @@ window.enhanceSelect=function(sel){
       if(!g('siteName')||!g('phone')){ err.textContent='현장명(위치)과 연락처는 꼭 입력해 주세요.'; return; }
       if(agree&&!agree.checked){ err.textContent='개인정보 수집·이용에 동의해 주세요.'; return; }
       err.textContent='';
-      var t=['[디앤 견적 문의]',
+      var t=['[D& 인테리어 견적 문의]',
         '현장: '+g('siteName'),'연락처: '+g('phone'),'공간유형: '+g('type'),
         '공사범위: '+g('scope'),'면적: '+g('area'),'희망시기: '+g('when'),
         '현장 위치: '+g('location'),'예산: '+g('budget'),'유입 경로: '+g('source')+(g('referrer')?' / 소개: '+g('referrer'):''),'요청: '+g('memo')].join('\n');
@@ -200,9 +200,9 @@ document.querySelectorAll('.form-card select').forEach(window.enhanceSelect);
     bar.querySelectorAll('[data-act]').forEach(function(b){
       b.addEventListener('click',function(){
         var act=b.getAttribute('data-act'), url=location.href.split('#')[0];
-        if(act==='pin'){ window.open('https://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(url)+'&media='+encodeURIComponent(absImg())+'&description='+encodeURIComponent(title+' | 디앤'),'_blank','noopener'); }
+        if(act==='pin'){ window.open('https://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(url)+'&media='+encodeURIComponent(absImg())+'&description='+encodeURIComponent(title+' | D& 인테리어'),'_blank','noopener'); }
         else if(act==='share'){
-          if(navigator.share){ navigator.share({title:title,text:title+' | 디앤',url:url}).catch(function(){}); }
+          if(navigator.share){ navigator.share({title:title,text:title+' | D& 인테리어',url:url}).catch(function(){}); }
           else copy(url,b);
         } else copy(url,b);
       });

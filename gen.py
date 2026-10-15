@@ -142,7 +142,7 @@ def sec_head(d, lg=True, extra=''):
     return f'<div class="section-head"><div><span class="eyebrow">{e(d["eyebrow"])}</span><h2 class="{cls}">{t(d["title"])}</h2></div><div class="sh-right"><p>{t(d["desc"])}</p>{extra}</div></div>'
 
 def page_hero(d, crumb, depth=0):
-    return f'''<section class="page-hero"><div class="page-hero-media"><img src="{e(d['img'])}" alt="디앤 시공 현장"></div><div class="wrap hero-content"><div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>{e(crumb)}</span></div><span class="eyebrow">{e(d['eyebrow'])}</span><h1 class="display" style="max-width:9em">{t(d['title'])}</h1><p style="max-width:42em;color:rgba(255,255,255,.78);margin:0">{t(d['text'])}</p></div></section>'''
+    return f'''<section class="page-hero"><div class="page-hero-media"><img src="{e(d['img'])}" alt="D& 인테리어 시공 현장"></div><div class="wrap hero-content"><div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>{e(crumb)}</span></div><span class="eyebrow">{e(d['eyebrow'])}</span><h1 class="display" style="max-width:9em">{t(d['title'])}</h1><p style="max-width:42em;color:rgba(255,255,255,.78);margin:0">{t(d['text'])}</p></div></section>'''
 
 def flow_html():
     fl=H['process'].get('flow') or []
@@ -398,7 +398,7 @@ def build_privacy():
 <h2 class="title-md" style="margin-top:28px">6. 방문 통계</h2><p>사이트 이용 통계(방문 수, 문의 버튼 클릭 등)를 위해 광고·분석 도구를 사용하는 경우가 있으며, 이 경우 쿠키 등으로 접속 정보가 수집될 수 있습니다. 브라우저 설정에서 쿠키를 거부할 수 있습니다.</p>
 <h2 class="title-md" style="margin-top:28px">7. 이용자의 권리와 문의</h2><p>열람·정정·삭제를 요청하실 수 있습니다. 개인정보 보호책임자: {e(S.get('biz_rep',''))} (대표) · 문의: {e(TEL)} · {e(MAIL)}</p>
 <p class="muted" style="margin-top:28px">시행일: 사이트 공개일부터 적용합니다.</p></div></section></main>'''
-    return head('개인정보처리방침 | '+S['brand'],'디앤 개인정보처리방침',path="privacy.html")+topbar(0,'privacy')+body+footer(0)
+    return head('개인정보처리방침 | '+S['brand'],'D& 인테리어 개인정보처리방침',path="privacy.html")+topbar(0,'privacy')+body+footer(0)
 
 def build_404():
     body='''<main id="main"><section class="section"><div class="wrap" style="text-align:center;max-width:640px"><span class="eyebrow">404</span><h1 class="title-lg" style="margin:8px 0 14px">페이지를 찾을 수 없습니다</h1><p class="muted">주소가 바뀌었거나 삭제된 페이지입니다. 아래 버튼으로 이동해 주세요.</p><div class="inline-actions" style="justify-content:center;margin-top:22px"><a class="btn primary" href="/index.html">홈으로</a><a class="btn secondary" href="/portfolio.html">시공 사례 보기</a><a class="btn secondary" href="/contact.html#quoteForm">견적 문의</a></div></div></section></main>'''
@@ -448,7 +448,7 @@ var io=new IntersectionObserver(function(en){{en.forEach(function(x){{if(!x.isIn
 document.querySelectorAll('.rv').forEach(function(el){{io.observe(el);var c=el.querySelector('[data-count]');if(c)c.textContent='1'}});}})();
 (function(){{var s=document.getElementById('adSend');if(!s)return;var n=window.DAND_SMS||'';var v=function(i){{return document.getElementById(i).value.trim()}};
 s.addEventListener('click',function(ev){{if(!v('adPhone')){{ev.preventDefault();document.getElementById('adErr').textContent='연락처를 입력해 주세요.';return}}document.getElementById('adErr').textContent='';
-var t='[디앤 상담 문의]\\n공사: '+v('adType')+'\\n평수: '+(v('adArea')||'미정')+'\\n지역: '+(v('adLoc')||'미정')+'\\n연락처: '+v('adPhone');
+var t='[D& 인테리어 상담 문의]\\n공사: '+v('adType')+'\\n평수: '+(v('adArea')||'미정')+'\\n지역: '+(v('adLoc')||'미정')+'\\n연락처: '+v('adPhone');
 try{{if(window.fbq)fbq('track','Lead')}}catch(_){{}}
 if(!n){{ev.preventDefault();return}}s.href='sms:'+n+(/iPhone|iPad|Mac/.test(navigator.userAgent)?'&':'?')+'body='+encodeURIComponent(t);}});}})();
 document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="sms:"]');if(a){{try{{if(window.fbq)fbq('track','Contact')}}catch(_){{}}}}}});</script>
