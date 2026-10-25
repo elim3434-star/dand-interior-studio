@@ -493,6 +493,7 @@ collections:
                 options: [{ label: 주거, value: residential }, { label: 상업, value: commercial }, { label: "뷰티·스파·욕실", value: bath }, { label: 오피스, value: office }, { label: 쇼룸, value: showroom }]
               - { label: "스타일 (필터용: 모던·미니멀·모던 클래식·하이엔드 중 하나)", name: style_filter, widget: string, required: false }
               - { label: "규모 (필터용: 20평형대·30-40평형대·50평 이상·대형 상업공간 중 하나)", name: size_filter, widget: string, required: false }
+              - { label: "브라우저 탭·검색 결과 제목 (예: 안산 카페 인테리어 시공 | 카페 하녹 | 디앤)", name: seo_title, widget: string, required: false }
               - { label: "검색 키워드 (쉼표로 구분)", name: seo_keywords, widget: string, required: false }
               - label: "시공 전·후 비교 (같은 위치에서 찍은 사진 쌍이 있을 때만 나옵니다)"
                 name: before_after

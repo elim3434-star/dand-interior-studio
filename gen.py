@@ -3,6 +3,7 @@ import json
 #!/usr/bin/env python3
 """content/*.json 을 읽어 모든 HTML 페이지를 생성합니다. (관리자 페이지에서 저장하면 자동 실행됨)"""
 import os, json, html, sys
+from datetime import datetime, timezone, timedelta
 from urllib.parse import urlsplit
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import viz
@@ -189,7 +190,7 @@ def extras_html(r):
 
 def build_index():
     h=H['hero']
-    s=head(f"{S['brand']} | 안산 상가·아파트 인테리어", S['site_desc'],keywords=S.get('seo_keywords',''))+topbar(0,'home')
+    s=head(f"{S['brand']} | 안산·수도권 상가·아파트 인테리어", S['site_desc'],keywords=S.get('seo_keywords',''))+topbar(0,'home')
     stats=''.join(f'<article{" class=has-pop tabindex=0" if x.get("img") else ""}><strong>{e(x["t"])}</strong><span>{e(x["d"])}</span>'+(f'<figure class="stat-pop" aria-hidden="true"><img src="{e(x["img"])}" alt="" loading="lazy"><figcaption>{e(x.get("cap",""))}</figcaption></figure>' if x.get("img") else '')+'</article>' for x in H['stats'])
     def slider(x):
         im=[i for i in x.get('images',[]) if i]
@@ -366,7 +367,7 @@ def build_project(p):
     return s
 
 def build_case(r):
-    s=head(f"{r['title']} | {S['brand']}",r.get('intro') or r['desc'],1,path=f"cases/{r['slug']}.html",keywords=r.get('seo_keywords',''))+topbar(1,'portfolio')
+    s=head(r.get('seo_title') or f"{r['title']} | {S['brand']}",r.get('intro') or r['desc'],1,path=f"cases/{r['slug']}.html",keywords=r.get('seo_keywords',''))+topbar(1,'portfolio')
     groups=[]
     for it in r['gallery']:
         if it['group'] not in [x[0] for x in groups]: groups.append((it['group'],[]))
@@ -479,10 +480,14 @@ def _fix_imgs(content,path):
         return tag
     return _re.sub(r'<img\b[^>]*>',rep,content)
 
+CHANGED=set()
 def write(path,content):
     if path.endswith('.html'): content=_fix_imgs(content,path)
 
     full=os.path.join(ROOT,path); os.makedirs(os.path.dirname(full),exist_ok=True)
+    try: old=open(full,encoding='utf-8').read()
+    except OSError: old=None
+    if old!=content: CHANGED.add(path)
     open(full,'w',encoding='utf-8').write(content)
 
 if __name__=='__main__':
@@ -505,7 +510,17 @@ if __name__=='__main__':
         paths=['index.html','about.html','portfolio.html','contact.html','privacy.html']
         paths += [f"projects/{p['slug']}.html" for p in PROJECTS]
         paths += [f"cases/{r['slug']}.html" for r in CASES if r.get('slug') and r.get('gallery')]
-        xml='<?xml version="1.0" encoding="utf-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{e(origin+"/"+x)}</loc></url>\n' for x in paths)+'</urlset>\n'
+        # 수정일(lastmod): 내용이 바뀐 페이지만 오늘 날짜로 갱신하고, 나머지는 이전 사이트맵의 날짜를 유지합니다.
+        today=datetime.now(timezone(timedelta(hours=9))).strftime('%Y-%m-%d')
+        prev={}
+        try:
+            for m in re.finditer(r'<url><loc>(.*?)</loc>(?:<lastmod>(.*?)</lastmod>)?</url>',open(os.path.join(ROOT,'sitemap.xml'),encoding='utf-8').read()):
+                if m.group(2): prev[m.group(1)]=m.group(2)
+        except OSError: pass
+        def lm(x):
+            u=origin+"/"+x
+            return today if (x in CHANGED or u not in prev) else prev[u]
+        xml='<?xml version="1.0" encoding="utf-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{e(origin+"/"+x)}</loc><lastmod>{lm(x)}</lastmod></url>\n' for x in paths)+'</urlset>\n'
         write('sitemap.xml',xml)
         write('robots.txt',f'User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\nSitemap: {origin}/sitemap.xml\n')
     else:
